@@ -1,0 +1,34 @@
+# Node
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# TS-Node cache
+.ts-node/
+
+# IDE
+.vscode/
+.idea/
+
+# Coverage
+coverage/
+
+# Daemo secrets (extra safety)
+daemo.config.json

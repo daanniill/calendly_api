@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "daemo-engine": "^0.2.5",
+    "node-fetch": "^3.3.2",
+    "reflect-metadata": "^0.2.2"
+  },
+  "name": "calendly_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

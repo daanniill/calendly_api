@@ -1,5 +1,6 @@
 import { DaemoFunction } from "daemo-engine";
 import "reflect-metadata";
+import { z } from "zod";
 
 import {
   AvailabilityResponse,
@@ -7,11 +8,18 @@ import {
   BookingResult
 } from "../schemas/SchedulingSchemas";
 
+import {
+  AvailabilityResponseSchema,
+  BookingInputSchema,
+  BookingResultSchema
+} from "../schemas/ZodSchemas";
+
 export class SchedulingService {
 
   @DaemoFunction({
     description: "Find available meeting slots with a sales representative for this week.",
-    
+    inputSchema: z.object({}),
+    outputSchema: AvailabilityResponseSchema
   })
   async getAvailability(): Promise<AvailabilityResponse> {
 
@@ -36,7 +44,8 @@ export class SchedulingService {
 
   @DaemoFunction({
     description: "Book a meeting for the user at a selected time slot.",
-    
+    inputSchema: BookingInputSchema,
+    outputSchema: BookingResultSchema
   })
   async bookMeeting(input: BookingInput): Promise<BookingResult> {
 

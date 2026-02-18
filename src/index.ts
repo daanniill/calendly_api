@@ -1,4 +1,5 @@
 import "reflect-metadata";
+import "dotenv/config";
 import { DaemoBuilder, DaemoHostedConnection } from "daemo-engine";
 import { SchedulingService } from "./services/SchedulingService";
 
